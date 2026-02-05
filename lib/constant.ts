@@ -3,20 +3,19 @@ import { IMetricData } from "@/components/Metrices";
 import { textsItem } from "@/components/RotatingText";
 import { Gamepad2, IdCardLanyard, LucideIcon, TrendingUp, Users } from "lucide-react";
 
-// export const navbarList = [
-//   { label: 'Home', href: '/' },
-//   { label: 'About', href: '/about' },
-//   { label: 'Games', href: '/games' },
-//   { label: 'Contact', href: '/contact' },
-// ]
-
 export const navbarList = [
-  { label: 'Home', ariaLabel: "Go to Home Page", link: '/' },
-  { label: 'About', ariaLabel: "Learn About Us", link: '/about' },
-  { label: 'Games', ariaLabel: "Check Out Games", link: '/games' },
-  { label: 'Contact', ariaLabel: "Get In Touch", link: '/contact' },
-  // "Home","About","Games","Contact",
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Games', href: '/games' },
+  { label: 'Contact', href: '/contact' },
 ]
+
+// export const navbarList = [
+//   { label: 'Home', ariaLabel: "Go to Home Page", link: '/' },
+//   { label: 'About', ariaLabel: "Learn About Us", link: '/about' },
+//   { label: 'Games', ariaLabel: "Check Out Games", link: '/games' },
+//   { label: 'Contact', ariaLabel: "Get In Touch", link: '/contact' },
+// ]
 
 export const heroHeading = "Every Great Experience Starts with a Game Object." as string
 
@@ -420,3 +419,38 @@ export const demoItems = [
     image: '/game images/house demolish.webp'
   }
 ] as const;
+
+
+
+export const gamesStudioList = [
+  {
+    title: "ProTech Games S.r.l",
+    src: "/studios/protech.webp"
+  },
+  {
+    title: "Game View Productions",
+    src: "/studios/gameview.webp"
+  }, {
+    title: "Crood Games Studio",
+    src: "/studios/crood.webp"
+  }, {
+    title: "The Game Critic",
+    src: "/studios/game critic.webp"
+  }, {
+    title: "Smash Ultimate",
+    src: "/studios/smash ultimate.webp"
+  }, {
+    title: "MadCap Games",
+    src: "/studios/madcap games.webp"
+  },
+  {
+    title: "United Racing and Simulation Games",
+    src: "/studios/united racing.webp"
+  }, {
+    title: "Inside Out Games",
+    src: "/studios/insight out.webp"
+  }, {
+    title: "Legends Games Studio",
+    src: "/studios/legends games.webp"
+  },
+]

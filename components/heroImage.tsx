@@ -16,7 +16,9 @@ export const itemVariants: Variants = {
 export default function HeroImage({ src, className }: { src: string, className?: string }) {
   return (
     <>
-      <motion.div className={cn(`relative w-64 h-64 rounded-full overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] ${className}`)}
+      <motion.div className={cn(`relative w-64 h-64 max-md:w-32 max-md:h-32 rounded-full overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]
+      max-sm:w-24 max-sm:h-24
+      ${className}`)}
         variants={itemVariants}
       >
         <Image

@@ -1,4 +1,7 @@
 import Discover from "@/components/Discover";
+import Explore from "@/components/explore";
+import GamingFooter from "@/components/footer";
+import Growth from "@/components/Growth";
 import Hero from "@/components/Hero";
 
 export default function Home() {
@@ -8,7 +11,9 @@ export default function Home() {
     justify-center dark:bg-black">
       <Hero />
       <Discover />
-      {/* <Explore /> */}
+      <Growth />
+      <Explore />
+      <GamingFooter />
     </div>
   );
 }

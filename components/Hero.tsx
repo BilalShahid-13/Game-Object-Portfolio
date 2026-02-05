@@ -1,12 +1,10 @@
 "use client";
-import Image from "next/image";
+import { motion, Variants } from "framer-motion";
 import Description from "./Description";
 import Heading from "./Heading";
 import Metrices from "./Metrices";
-import HeroImage, { itemVariants } from "./heroImage";
-import { montserrat } from "@/lib/utils";
-import { motion, Variants } from "framer-motion"
 import DownloadHero from "./downloadHero";
+import HeroImage from "./heroImage";
 
 export const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -42,12 +40,12 @@ export default function Hero() {
           viewport={{ once: true }}
         >
           <HeroImage
-            className="absolute left-10 top-0"
+            className="absolute left-10 top-0 max-md:top-auto max-md:bottom-60 "
             src="/kids-playing-football.jpg"
           />
 
           <HeroImage
-            className="absolute right-10 top-50"
+            className="absolute right-10 top-50 max-md:top-auto max-md:bottom-60"
             src="/3d-cartoon-back-school.jpg"
           />
 

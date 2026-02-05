@@ -29,28 +29,27 @@ export default function Discover() {
   return (
     <>
       <div
-        className="flex bg-[#1c1600] w-full ">
+        className="flex bg-[#1c1600] w-full
+        max-md:flex-col max-md:py-12 max-md:gap-4 max-md:w-fit">
         <motion.div
           initial="hidden"
-          // 1. Change 'animate' to 'whileInView'
           whileInView="visible"
-          // 2. Control how the animation triggers
           viewport={{
-            once: true,      // Animation happens only the first time you scroll to it
-            amount: 0.3      // Animation starts when 30% of the element is visible
+            once: true,
+            amount: 0.3
           }}
           variants={containerVariants}
-          className="select-none flex flex-col justify-center items-center w-full gap-6 mx-6">
+          className="select-none flex flex-col justify-center items-center w-full gap-6 mx-6 max-md:mx-0 max-sm:px-5">
           <motion.h1
             variants={itemVariants}
             className={`${montserrat.className}
-            text-6xl font-black text-white uppercase italic text-center`}>
+            text-6xl font-black text-white uppercase italic text-center max-sm:text-4xl `}>
             Discover Our Game Collection
           </motion.h1>
           <motion.p
             variants={itemVariants}
             style={montserrat.style}
-            className="text-white font-semibold text-xl">From relaxing puzzles to thrilling adventures, find your next mobile obsession with Game Object.</motion.p>
+            className="text-white font-semibold text-xl max-md:text-lg max-sm:text-base">From relaxing puzzles to thrilling adventures, find your next mobile obsession with Game Object.</motion.p>
           <motion.div
             variants={itemVariants}
             className="flex flex-row justify-center items-center gap-3">
@@ -60,7 +59,6 @@ export default function Discover() {
               className="text-white font-medium"> Find our titles on your favorite platforms</p>
             <RotatingText
               texts={platformList}
-              // texts={['Apple', 'Android', 'Amazon']}
               mainClassName="sm:px-2 md:px-3 bg-yellow-400 text-black overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
@@ -72,8 +70,10 @@ export default function Discover() {
               rotationInterval={2000}
             />
           </motion.div>
-          <motion.div className="grid grid-cols-4 gap-4 justify-start items-center"
-          variants={itemVariants}
+          <motion.div className="grid grid-cols-4 gap-4 justify-start items-center
+          max-sm:grid-cols-3
+          "
+            variants={itemVariants}
           >
             {gameGenres.map((genre, index) =>
               <Badge className="bg-yellow-500 text-white px-4 py-3"
@@ -81,7 +81,8 @@ export default function Discover() {
                 key={index}>{genre}</Badge>)}
           </motion.div>
         </motion.div>
-        <div style={{ width: '100vw', height: '100vh' }}>
+        <div
+          className="w-screen h-screen max-md:w-full max-md:h-screen">
           <DomeGallery
             fit={0.8}
             minRadius={600}

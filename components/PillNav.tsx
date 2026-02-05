@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import Link from 'next/link';
+import Image from 'next/image';
+import { montserrat } from '@/lib/utils';
 
 export type PillNavItem = {
   label: string;
@@ -247,9 +249,10 @@ const PillNav: React.FC<PillNavProps> = ({
   } as React.CSSProperties;
 
   return (
-    <div className="absolute top-[1em] z-[1000] w-full left-0 md:w-auto md:left-auto">
+    <div className="absolute top-[1em] z-1000 w-full left-0 md:w-auto md:left-auto">
       <nav
-        className={`w-full md:w-max flex items-center justify-between md:justify-start box-border px-4 md:px-0 ${className}`}
+        className={`w-full md:w-max
+          flex items-center justify-between md:justify-start box-border px-4 md:px-0 ${className}`}
         aria-label="Primary"
         style={cssVars}
       >
@@ -257,19 +260,26 @@ const PillNav: React.FC<PillNavProps> = ({
           <Link
             href={items[0].href}
             aria-label="Home"
-            onMouseEnter={handleLogoEnter}
+            // onMouseEnter={handleLogoEnter}
             role="menuitem"
             ref={el => {
               logoRef.current = el;
             }}
-            className="rounded-full p-2 inline-flex bg-[#E8E2DB] items-center justify-center overflow-hidden"
+            className=" p-2 inline-flex gap-3
+            bg-neutral-100/80 backdrop-blur-lg items-center justify-center overflow-hidden rounded-full px-3"
             style={{
-              width: 'var(--nav-h)',
-              height: 'var(--nav-h)',
+              // width: 'var(--nav-h)',
+              // height: 'var(--nav-h)',
               // background: 'var(--base, #000)'
             }}
           >
-            <img src={logo} alt={logoAlt} ref={logoImgRef} className="w-full h-full object-cover block" />
+            <Image src={logo}
+              width={30} height={30}
+
+              alt={logoAlt} ref={logoImgRef}
+              className="w-8 h-8 block" />
+            <h1 style={montserrat.style} className='font-semibold text-lg'>Game Object</h1>
+
           </Link>
         ) : (
           <a
@@ -358,7 +368,7 @@ const PillNav: React.FC<PillNavProps> = ({
                 'relative overflow-hidden inline-flex items-center justify-center h-full no-underline rounded-full box-border font-semibold text-[16px] leading-[0] uppercase tracking-[0.2px] whitespace-nowrap cursor-pointer px-0';
 
               return (
-                <li key={item.href} role="none" className="flex h-full">
+                <li key={i} role="none" className="flex h-full">
                   {isRouterLink(item.href) ? (
                     <Link
                       role="menuitem"
