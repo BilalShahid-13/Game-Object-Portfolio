@@ -1,8 +1,9 @@
 "use client";
 import { montserrat } from '@/lib/utils';
 import { motion } from "framer-motion";
-import { Trophy } from 'lucide-react';
+import { Orbit, Trophy } from 'lucide-react';
 import { Badge } from './ui/badge';
+import OrbitGradientIcon, { ZapGradientIcon } from './OrbitGradientIcon';
 
 export default function Heading() {
   return (
@@ -30,7 +31,7 @@ export default function Heading() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="text-[12vw] md:text-[10vw] font-black text-black tracking-[-0.05em] leading-[0.85] uppercase italic"
+            className="relative text-[12vw] md:text-[10vw] font-black text-black tracking-[-0.05em] leading-[0.85] uppercase italic"
           >
             DOMINATE <br />
             <span className="relative inline-block">
@@ -42,15 +43,17 @@ export default function Heading() {
                 className="absolute -bottom-2 left-0 h-2 bg-gradient-to-r from-yellow-400 to-orange-500"
               />
             </span>
-
+            {/* <Orbit className='absolute top-0 right-0 ' /> */}
+            <OrbitGradientIcon />
+            <ZapGradientIcon />
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ opacity: 0,y:0,x:0 }}
+              animate={{ opacity: 1,y:10,x:10 }}
               transition={{ delay: 1 }}
-              className="absolute right-0 mr-[12%] top-0 hidden lg:block rotate-90 origin-left"
+              className="absolute right-0 top-17 hidden lg:block rotate-90 origin-center"
             >
               <span className="text-[10px] font-bold tracking-[1em] text-yellow-500/60 uppercase whitespace-nowrap">
-                EST. MMXXIV
+                GAME . OBJECT
               </span>
             </motion.div>
           </motion.h1>
