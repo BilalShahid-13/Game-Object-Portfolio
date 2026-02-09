@@ -18,6 +18,7 @@ export default async function GamesPage() {
         Favorite Game Awaits!
       </TextAnimate>
       <MarqueeContainer />
+      <Partners />
       <GamesHeading heading="Discover
               Our Game Collection"
         des={["Casual puzzles to epic adventures, discover your next mobile obsession. We craft unforgettable experiences for every player.", "We have a unique understanding of the digital games space, connecting more than 7 million daily active players worldwide."]}
@@ -25,7 +26,7 @@ export default async function GamesPage() {
       <Suspense fallback={<GamesLoadingSkeleton />}>
         <DiscoverGames id={"7050987846191348839"} />
       </Suspense>
-      <Partners />
+
 
     </main>
   )
