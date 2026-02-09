@@ -1,27 +1,4 @@
 
-// export default function Partners() {
-//   return (
-//     <>
-//       <section className="relative w-full flex flex-col justify-center items-center">
-//         <div className="grid grid-cols-3 justify-center items-center gap-3">
-//           <div className="hexagon-clip"></div>
-//           <div className="hexagon-clip"></div>
-//           <div className="hexagon-clip"></div>
-//           <div className="hexagon-clip"></div>
-//           <div className="hexagon-clip"></div>
-//           <div className="hexagon-clip"></div>
-//           <div className="hexagon-clip"></div>
-//           <div className="hexagon-clip"></div>
-//           <div className="hexagon-clip"></div>
-//         </div>
-//         <div
-//           className="absolute -z-10 -left-10 -top-10 w-52 h-52 rounded-full bg-linear-to-b from-pink-100 to-red-500 opacity-40 blur-xl" />
-//         <div className="absolute -z-10 -right-10 -bottom-10 w-52 h-52 rounded-full bg-linear-to-b from-purple-100 to-purple-500 opacity-30 blur-3xl" />
-//       </section>
-//     </>
-//   )
-// }
-
 import HexagonContainer from "@/components/hexagon";
 import { gamesStudioList } from "@/lib/constant";
 import Image, { StaticImageData } from "next/image";

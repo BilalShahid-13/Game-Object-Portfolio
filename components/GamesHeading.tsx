@@ -1,4 +1,3 @@
-"use client";
 import { montserrat } from "@/lib/utils";
 
 export default function GamesHeading({ heading, des }: { heading: string, des: string[] }) {

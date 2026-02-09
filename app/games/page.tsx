@@ -1,7 +1,6 @@
 "use server";
 import GamesHeading from "@/components/GamesHeading";
 import { GamesLoadingSkeleton } from "@/components/GamesLoadingSkeleton";
-import StudioList from "@/components/studioList";
 import { TextAnimate } from "@/components/ui/text-animate";
 import DiscoverGames from "@/section/discoverGames";
 import MarqueeContainer from "@/section/marqueeContainer";
