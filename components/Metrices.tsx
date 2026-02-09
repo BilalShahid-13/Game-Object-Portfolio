@@ -13,7 +13,6 @@ export interface IMetricData {
 }
 
 
-
 export default function Metrices() {
   return (
     <>

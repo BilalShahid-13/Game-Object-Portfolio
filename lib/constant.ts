@@ -1,49 +1,81 @@
 import { ImageItem } from "@/components/DomeGallery";
 import { IMetricData } from "@/components/Metrices";
 import { textsItem } from "@/components/RotatingText";
-import { Gamepad2, IdCardLanyard, LucideIcon, TrendingUp, Users } from "lucide-react";
+import { Gamepad2, IdCardLanyard, TrendingUp, Users } from "lucide-react";
+
+// default images discover
+import animalHop from "@/app/assets/cover images/animal hop.avif";
+import bunny from "@/app/assets/cover images/bunny.avif";
+import bus1 from "@/app/assets/cover images/bus 1.avif";
+import bus from "@/app/assets/cover images/bus.avif";
+import cheetah from "@/app/assets/cover images/cheetah.avif";
+import cowboy from "@/app/assets/cover images/cowbow.avif";
+import dragon from "@/app/assets/cover images/dragon.avif";
+import fairy from "@/app/assets/cover images/fairy.avif";
+import flying from "@/app/assets/cover images/flying.avif";
+import garage from "@/app/assets/cover images/garage.avif";
+import horseAcademy from "@/app/assets/cover images/horse academy.avif";
+import houseDemolish from "@/app/assets/cover images/house demolish.avif";
+import hunting from "@/app/assets/cover images/hunting.avif";
+import kite from "@/app/assets/cover images/kite.avif";
+import mermaid from "@/app/assets/cover images/mermaid.avif";
+import penguin from "@/app/assets/cover images/penguin.avif";
+import prisonEscape from "@/app/assets/cover images/prison escape.avif";
+import puzzle from "@/app/assets/cover images/puzzle.avif";
+import ragdoll from "@/app/assets/cover images/ragdoll.avif";
+import rollerCoaster from "@/app/assets/cover images/roller coster.avif";
+import rollingBall from "@/app/assets/cover images/rolling ball.avif";
+import sorting from "@/app/assets/cover images/sorting.avif";
+import unicorn from "@/app/assets/cover images/unicorn.avif";
+// end default images
+
+// studios
+import protech from "@/app/assets/studios/protech.avif";
+import gameview from "@/app/assets/studios/gameview.avif";
+import crood from "@/app/assets/studios/crood.avif";
+import gameCritic from "@/app/assets/studios/game critic.avif";
+import smashUltimate from "@/app/assets/studios/smash ultimate.avif";
+import madcap from "@/app/assets/studios/madcap games.avif";
+import unitedRacing from "@/app/assets/studios/united racing.avif";
+import insightOut from "@/app/assets/studios/insight out.avif";
+import legendsGames from "@/app/assets/studios/legends games.avif";
+// end studio
 
 export const navbarList = [
   { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
+  // { label: 'About', href: '/about' },
   { label: 'Games', href: '/games' },
-  { label: 'Contact', href: '/contact' },
+  // { label: 'Contact', href: '/contact' },
 ]
 
-// export const navbarList = [
-//   { label: 'Home', ariaLabel: "Go to Home Page", link: '/' },
-//   { label: 'About', ariaLabel: "Learn About Us", link: '/about' },
-//   { label: 'Games', ariaLabel: "Check Out Games", link: '/games' },
-//   { label: 'Contact', ariaLabel: "Get In Touch", link: '/contact' },
-// ]
 
 export const heroHeading = "Every Great Experience Starts with a Game Object." as string
 
 
 export const DEFAULT_IMAGES: ImageItem[] = [
-  { src: '/cover images/animal hop.webp', alt: 'Animal Hop' },
-  { src: '/cover images/bunny.webp', alt: 'Bunny' },
-  { src: '/cover images/bus 1.webp', alt: 'Bus 1' },
-  { src: '/cover images/bus.webp', alt: 'Bus' },
-  { src: '/cover images/cheetah.webp', alt: 'Cheetah' },
-  { src: '/cover images/cowbow.webp', alt: 'Cowboy' },
-  { src: '/cover images/dragon.webp', alt: 'Dragon' },
-  { src: '/cover images/fairy.webp', alt: 'Fairy' },
-  { src: '/cover images/flying.webp', alt: 'Flying' },
-  { src: '/cover images/garage.webp', alt: 'Garage' },
-  { src: '/cover images/horse academy.webp', alt: 'Horse Academy' },
-  { src: '/cover images/house demolish.webp', alt: 'House Demolish' },
-  { src: '/cover images/hunting.webp', alt: 'Hunting' },
-  { src: '/cover images/kite.webp', alt: 'Kite' },
-  { src: '/cover images/mermaid.webp', alt: 'Mermaid' },
-  { src: '/cover images/penguin.webp', alt: 'Penguin' },
-  { src: '/cover images/prison escape.webp', alt: 'Prison Escape' },
-  { src: '/cover images/puzzle.webp', alt: 'Puzzle' },
-  { src: '/cover images/ragdoll.webp', alt: 'Ragdoll' },
-  { src: '/cover images/roller coster.webp', alt: 'Roller Coster' },
-  { src: '/cover images/rolling ball.webp', alt: 'Rolling Ball' },
-  { src: '/cover images/sorting.webp', alt: 'Sorting' },
-  { src: '/cover images/unicorn.webp', alt: 'Unicorn' }
+  { src: animalHop, alt: 'Animal Hop' },
+  { src: bunny, alt: 'Bunny' },
+  { src: bus1, alt: 'Bus 1' },
+  { src: bus, alt: 'Bus' },
+  { src: cheetah, alt: 'Cheetah' },
+  { src: cowboy, alt: 'Cowboy' },
+  { src: dragon, alt: 'Dragon' },
+  { src: fairy, alt: 'Fairy' },
+  { src: flying, alt: 'Flying' },
+  { src: garage, alt: 'Garage' },
+  { src: horseAcademy, alt: 'Horse Academy' },
+  { src: houseDemolish, alt: 'House Demolish' },
+  { src: hunting, alt: 'Hunting' },
+  { src: kite, alt: 'Kite' },
+  { src: mermaid, alt: 'Mermaid' },
+  { src: penguin, alt: 'Penguin' },
+  { src: prisonEscape, alt: 'Prison Escape' },
+  { src: puzzle, alt: 'Puzzle' },
+  { src: ragdoll, alt: 'Ragdoll' },
+  { src: rollerCoaster, alt: 'Roller Coaster' },
+  { src: rollingBall, alt: 'Rolling Ball' },
+  { src: sorting, alt: 'Sorting' },
+  { src: unicorn, alt: 'Unicorn' }
 ] as const;
 
 
@@ -425,32 +457,44 @@ export const demoItems = [
 export const gamesStudioList = [
   {
     title: "ProTech Games S.r.l",
-    src: "/studios/protech.webp"
+    src: protech,
+    id: "6174697258399929491"
   },
   {
     title: "Game View Productions",
-    src: "/studios/gameview.webp"
+    src: gameview,
+    id: "5972111047758411218"
   }, {
     title: "Crood Games Studio",
-    src: "/studios/crood.webp"
+    src: crood,
+    id: "7050987846191348839"
+
   }, {
     title: "The Game Critic",
-    src: "/studios/game critic.webp"
+    src: gameCritic,
+    id: "5807437428579296755"
+
   }, {
     title: "Smash Ultimate",
-    src: "/studios/smash ultimate.webp"
+    src: smashUltimate,
+    id: "5228832748770582751"
   }, {
     title: "MadCap Games",
-    src: "/studios/madcap games.webp"
+    src: madcap,
+    id: "8394382955721798373"
   },
   {
     title: "United Racing and Simulation Games",
-    src: "/studios/united racing.webp"
+    src: unitedRacing,
+    id: "5884990209541382466"
+
   }, {
     title: "Inside Out Games",
-    src: "/studios/insight out.webp"
+    src: insightOut,
+    id: "6973226670096639846"
   }, {
     title: "Legends Games Studio",
-    src: "/studios/legends games.webp"
+    src: legendsGames,
+    id: "4989665937495641401"
   },
 ]

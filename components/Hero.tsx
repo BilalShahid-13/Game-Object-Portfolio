@@ -1,10 +1,9 @@
 "use client";
-import { motion, Variants } from "framer-motion";
+import kids1 from "@/app/assets/3d-cartoon-back-school.avif";
+import kids from "@/app/assets/kids-playing-football.avif";
+import { Variants } from "framer-motion";
 import Description from "./Description";
 import Heading from "./Heading";
-import Metrices from "./Metrices";
-import DownloadHero from "./downloadHero";
-import HeroImage from "./heroImage";
 
 export const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -16,46 +15,37 @@ export const containerVariants: Variants = {
   }
 };
 
+import { lazy } from "react";
+const Metrices = lazy(() => import("./Metrices"))
+const DownloadHero = lazy(() => import("./downloadHero"))
+const HeroImage = lazy(() => import("./heroImage"))
+
 export default function Hero() {
   return (
     <>
       <div className="relative min-h-screen w-full">
-        {/* 1. Background Image Container */}
-        {/* <div className="absolute inset-0 -z-10">
-          <Image
-            src="/Asset 2.svg"
-            alt="Background"
-            fill
-            priority
-            className="object-cover" // This prevents stretching
-          />
-        </div> */}
 
-        {/* 2. Foreground Content */}
-
-        <motion.div className="relative z-10 flex flex-col mt-32 justify-center items-center gap-3 w-full"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible" // Starts animation when the section enters the viewport
-          viewport={{ once: true }}
+        <div className="
+        relative z-10 flex flex-col mt-32 justify-center items-center gap-3 w-full"
         >
           <HeroImage
-            className="absolute left-10 top-0 max-md:top-auto max-md:bottom-60 "
-            src="/kids-playing-football.jpg"
+            className="animate-fade-up delay-1 absolute left-10 top-0 max-md:top-auto max-md:bottom-60 "
+            src={kids}
+            isLCP={true}
           />
 
           <HeroImage
-            className="absolute right-10 top-50 max-md:top-auto max-md:bottom-60"
-            src="/3d-cartoon-back-school.jpg"
+            className="animate-fade-up delay-2 absolute right-10 top-50 max-md:top-auto max-md:bottom-60"
+            src={kids1}
+            isLCP={true}
           />
-
 
           <Heading />
           <Description />
           <DownloadHero />
 
           <Metrices />
-        </motion.div>
+        </div>
       </div>
 
     </>

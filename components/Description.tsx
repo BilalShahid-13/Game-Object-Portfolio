@@ -4,10 +4,7 @@ import { motion } from "framer-motion";
 export default function Description() {
   return (
     <div className="flex w-full justify-center px-4" >
-
-      {/* 2. The Blurred Box: inline-block + w-fit ensures it only hugs the content */}
       < div
-      // className="inline-block w-fit backdrop-blur-md bg-black/20 p-4 rounded-xl border border-white/10"
       >
         <motion.p
           initial={{ opacity: 0 }}

@@ -42,9 +42,10 @@ export default function Explore() {
             >
               <Image
                 src={value.src}
-                alt={value.title || "Game Studio"}
+                placeholder="blur"
+                alt={
+                  value.title || "Game Studio"}
                 fill
-                /* 'object-contain' is usually better for logos to prevent cropping inside a circle */
                 className="object-contain p-3 transition-transform duration-300 group-hover:scale-110 rounded-full"
               />
 

@@ -1,11 +1,10 @@
 "use client";
 import { montserrat } from "@/lib/utils";
-import DomeGallery from "./DomeGallery";
-import RotatingText from "./RotatingText";
 import { gameGenres, platformList } from "@/lib/constant";
 import { Variants } from 'framer-motion';
 import { motion } from "framer-motion";
 import { Badge } from "./ui/badge";
+import { lazy } from "react";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -25,6 +24,9 @@ const itemVariants: Variants = {
     transition: { duration: 0.6, ease: "easeOut" }
   },
 };
+
+const DomeGallery = lazy(()=>import("./DomeGallery"))
+const RotatingText = lazy(()=>import("./RotatingText"))
 export default function Discover() {
   return (
     <>

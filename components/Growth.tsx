@@ -7,6 +7,10 @@ import GrowthCard from "./GrowthCard";
 import { containerVariants } from "./Hero";
 import { itemVariants } from "./heroImage";
 import { OrbitingCircles } from "./ui/orbiting-circles";
+import dog from "@/app/assets/cute-dog.png"
+import pig from "@/app/assets/pig.jpg"
+import coin from "@/app/assets/coin.jpg"
+
 
 export default function Growth() {
   return (
@@ -79,7 +83,9 @@ export default function Growth() {
             delay={20}
             radius={80}
           >
-            <Image src={"/cute-dog.png"} alt="asd" width={70} height={70} className="rounded-full" />
+            <Image src={dog}
+              placeholder="blur"
+              alt="asd" width={70} height={70} className="rounded-full" />
           </OrbitingCircles>
 
           {/* Outer Circles (Reverse) */}
@@ -89,8 +95,12 @@ export default function Growth() {
             duration={20}
             radius={190}
           >
-            <Image src={"/pig.jpg"} alt="asd" width={70} height={70} className="rounded-full" />
-            <Image src={"/coin.jpg"} alt="asd" width={70} height={70} className="rounded-full" />
+            <Image src={pig}
+              placeholder="blur"
+              alt="asd" width={70} height={70} className="rounded-full" />
+            <Image src={coin}
+            placeholder="blur"
+            alt="asd" width={70} height={70} className="rounded-full" />
           </OrbitingCircles>
           <p style={montserrat.style}
             className="text-center">Ignite your passion and join us in redefining the future of gaming.</p>

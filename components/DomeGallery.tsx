@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useRef, useCallback } from 'react';
 import { useGesture } from '@use-gesture/react';
 import { DEFAULT_IMAGES } from '@/lib/constant';
+import Image, { StaticImageData } from 'next/image';
 
-export type ImageItem = string | { src: string; alt?: string };
+export type ImageItem = string | { src: StaticImageData | string; alt?: string };
 
 type DomeGalleryProps = {
   images?: ImageItem[];
@@ -25,7 +26,7 @@ type DomeGalleryProps = {
 };
 
 type ItemDef = {
-  src: string;
+  src: string | StaticImageData;
   alt: string;
   x: number;
   y: number;
@@ -818,8 +819,10 @@ export default function DomeGallery({
                       backfaceVisibility: 'hidden'
                     }}
                   >
-                    <img
+                    <Image
                       src={it.src}
+                      placeholder='blur'
+                      fill
                       draggable={false}
                       alt={it.alt}
                       className="w-full h-full object-cover pointer-events-none"
