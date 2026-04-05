@@ -43,8 +43,8 @@ import legendsGames from "@/app/assets/studios/legends games.avif";
 
 export const navbarList = [
   { label: 'Home', href: '/' },
-  // { label: 'About', href: '/about' },
-  { label: 'Games', href: '/games' },
+  { label: 'Games', href: '/games' }, 
+  { label: 'About', href: '/about' },
   // { label: 'Contact', href: '/contact' },
 ]
 

@@ -1,8 +1,7 @@
 "use client";
 import { navbarList } from '@/lib/constant';
-import StaggeredMenu from './StaggeredMenu';
-import PillNav from './PillNav';
 import { montserrat } from '@/lib/utils';
+import PillNav from './PillNav';
 
 export default function Navbar() {
   return (
