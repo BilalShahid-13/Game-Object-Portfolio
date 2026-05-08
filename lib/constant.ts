@@ -43,7 +43,7 @@ import legendsGames from "@/app/assets/studios/legends games.avif";
 
 export const navbarList = [
   { label: 'Home', href: '/' },
-  { label: 'Games', href: '/games' }, 
+  { label: 'Games', href: '/games' },
   { label: 'About', href: '/about' },
   // { label: 'Contact', href: '/contact' },
 ]
@@ -498,3 +498,5 @@ export const gamesStudioList = [
     id: "4989665937495641401"
   },
 ]
+
+export const EMAIL_LINK = "mailto:admin@bowmanfleetllc.com" 

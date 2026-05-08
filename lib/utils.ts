@@ -10,3 +10,12 @@ export const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
 })
+
+export const scrollToSection = (id: string) => {
+  const element = document.getElementById(id);
+  if (element && (window as any).lenis) {
+    (window as any).lenis.scrollTo(element, { offset: -80, duration: 1.5 });
+  } else {
+    element?.scrollIntoView({ behavior: "smooth" });
+  }
+};
