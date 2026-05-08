@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { EMAIL_LINK } from "@/lib/constant";
 import { montserrat, scrollToSection } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Download, Gamepad2, Mail, Star } from "lucide-react";
-import Link from "next/link";
+import { Download, Gamepad2, Star } from "lucide-react";
 import BentoSection from "./BentoSection";
+import ContactUs from "./ContactUsForm";
 
 const SectionHeader = ({ title, highlight, description, align = "left" }: any) => (
     <div className={`mb-16 ${align === "center" ? "text-center" : "text-left"}`}>
@@ -112,6 +112,8 @@ export default function ExpandedLandingPage() {
                     <BentoSection />
                 </div>
             </section>
+
+            <ContactUs />
         </div>
     );
 }

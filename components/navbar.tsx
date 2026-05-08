@@ -2,8 +2,10 @@
 import { EMAIL_LINK } from '@/lib/constant';
 import { montserrat, scrollToSection } from '@/lib/utils';
 import { Button } from './ui/button';
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
+  const router = useRouter();
   return (
     <div className='flex justify-center items-center w-full'>
       {/* <PillNav
@@ -20,8 +22,12 @@ export default function Navbar() {
         // theme="light"
         initialLoadAnimation={true}
       /> */}
-      <nav className="fixed top-0 w-full z-[100] border-b border-white/5 backdrop-blur-xl bg-[#0d0d00]/60 px-6 md:px-12 py-5 flex justify-between items-center">
-        <div className="flex items-center gap-3 cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
+      <nav className="fixed top-0 w-full z-[100] border-b border-white/5 backdrop-blur-xl bg-[#0d0d00]/60 px-6 md:px-12 py-5 flex justify-between items-center text-[#f5f0e0]">
+        <div className="flex items-center gap-3 cursor-pointer" onClick={() => {
+          router.push('/')
+          window.scrollTo(0, 0)
+
+        }}>
           <div className="w-9 h-9 bg-yellow-500 rounded-lg flex items-center justify-center font-black text-black">B</div>
           <span className={`${montserrat.className} text-[#f5f0e0] font-black tracking-tighter text-lg uppercase`}>
             Bowman <span className="text-yellow-500 italic">Fleet</span>
@@ -32,10 +38,14 @@ export default function Navbar() {
             <button key={id} onClick={() => scrollToSection(id)} className="hover:text-yellow-500 transition-colors uppercase">{id}</button>
           ))}
         </div>
-        <Button asChild
+        <Button
           variant={'default'}
+          onClick={() => scrollToSection('contact-us')}
           className="bg-yellow-500 text-black font-black hover:scale-105 hover:bg-yellow-600 transition-transform">
-          <a href={EMAIL_LINK}>CONTACT US</a>
+          CONTACT US
+          {/* <a href={EMAIL_LINK}>
+            </a> */}
+          {/* <a href={EMAIL_LINK}>CONTACT US</a> */}
         </Button>
       </nav>
     </div>

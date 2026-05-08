@@ -80,9 +80,6 @@ export default function GamingFooter() {
             <a href={EMAIL_LINK} className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-yellow-500 hover:text-black transition-all">
               <Mail size={20} />
             </a>
-            {/* <a href="https://bowmanfleetllc.com" className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center hover:bg-yellow-500 hover:text-black transition-all">
-                        <Globe size={20} />
-                    </a> */}
           </div>
         </div>
         <div className="grid grid-cols-2 gap-10">
@@ -101,21 +98,13 @@ export default function GamingFooter() {
               Privacy & Terms
             </Link>
           </div>
+          <FooterColumn title="Contact" links={[{
+            label: `1435 Lake Heights Cir
+Dacula, GA 30019-3236
+United States`, href: "/"
+          }, { label: "+1-903-370-1444", href: "#" }]} />
         </div>
       </div>
     </footer>
   );
 }
-
-// Sub-components for cleaner code
-const SocialIcon = ({ Icon }: { Icon: any }) => (
-  <a href="#" className="p-2 rounded-full text-gray-400 hover:text-yellow-500 hover:bg-yellow-500/10 transition-all">
-    <Icon size={20} strokeWidth={2.5} />
-  </a>
-);
-
-const FooterLink = ({ text }: { text: string }) => (
-  <a href="#" className="text-gray-500 hover:text-yellow-500 font-medium transition-colors max-sm:text-sm">
-    {text}
-  </a>
-);
