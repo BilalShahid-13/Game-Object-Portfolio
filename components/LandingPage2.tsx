@@ -5,7 +5,10 @@ import { Button } from "@/components/ui/button";
 import { EMAIL_LINK } from "@/lib/constant";
 import { montserrat, scrollToSection } from "@/lib/utils";
 import { motion } from "framer-motion";
-import { Download, Gamepad2, Star } from "lucide-react";
+import { Download, Star } from "lucide-react";
+import Image from "next/image";
+import crazy from "../public/hero/crazy.webp";
+import drive from "../public/hero/drive.webp";
 import BentoSection from "./BentoSection";
 import ContactUs from "./ContactUsForm";
 
@@ -28,8 +31,16 @@ const GameCard = ({ game }: { game: any }) => (
     >
         <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${game.color} opacity-0 group-hover:opacity-10 blur-3xl transition-opacity`} />
         <div className="flex justify-between items-start mb-12">
-            <div className={`w-20 h-20 rounded-3xl bg-gradient-to-br ${game.color} flex items-center justify-center shadow-2xl`}>
-                <Gamepad2 className="w-10 h-10 text-white" />
+            <div className="relative w-20 h-20 rounded-3xl overflow-hidden">
+                <Image
+                    src={game.img}
+                    className="object-cover rounded-3xl"
+                    width={80}
+                    height={80}
+                    priority
+                    quality={80}
+                    alt={game.title}
+                />
             </div>
             <div className="text-right">
                 <span className="block text-3xl font-black text-yellow-500">{game.downloads}</span>
@@ -127,12 +138,14 @@ const GAMES_DATA = [
         link: "https://play.google.com/store/apps/details?id=com.madcap.extreme.stunts.gt.racing",
         color: "from-yellow-400 to-orange-600",
         tags: ["Action", "Racing", "3D"],
+        img: crazy,
         description: "High-octane racing with physics-defying stunts."
     },
     {
         title: "Drive Maze Parking Challenge",
         downloads: "100,000+",
         link: "https://play.google.com/store/apps/details?id=com.varleytg.drivemaze.parking.challenge",
+        img: drive,
         color: "from-blue-500 to-cyan-400",
         tags: ["Simulator", "Puzzle", "Drive"],
         description: "Precision driving simulator focused on technical mazes."

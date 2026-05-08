@@ -1,8 +1,7 @@
 "use client";
-import { EMAIL_LINK } from '@/lib/constant';
 import { montserrat, scrollToSection } from '@/lib/utils';
-import { Button } from './ui/button';
 import { useRouter } from 'next/navigation';
+import { Button } from './ui/button';
 
 export default function Navbar() {
   const router = useRouter();
